@@ -28,5 +28,71 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
+
+    /* Torre: Move-se em linha reta horizontalmente ou verticalmente. Seu programa deverá simular o movimento da Torre cinco casas para a direita.
+ 
+    Bispo: Move-se na diagonal. Seu programa deverá simular o movimento do Bispo cinco casas na diagonal para cima e à direita. Para representar a diagonal, você imprimirá a combinação de duas direções a cada casa (ex: "Cima, Direita").
+     
+    Rainha: Move-se em todas as direções. Seu programa deverá simular o movimento da Rainha oito casas para a esquerda.
+
+                                                                                                                    */
+
+int torre = 1, rainha =  1; 
+
+
+printf("**** Peça: Bispo ****\n\n");
+
+for (int bispo = 1; bispo <= 5; bispo++)
+{
+
+printf("cima, direita\n");    
+}
+printf("\n\n");
+////////////////////////////////////////////
+
+printf("**** Peça: Rainha ****\n\n");
+while (rainha <= 8)
+{
+ printf("Esquerda\n");
+ rainha++;
+}
+
+///////////////////////////////////
+printf("\n\n");
+printf("**** Peça: torre ****\n\n");
+do
+{
+ printf("Direita\n");
+ torre++;
+} while (torre <= 5);
+
+
+
+
+
+
+
+
+
+
+
+/*
+printf("*** Bem vindo ao jogo de xadrez - Matecheck ***\n");
+printf("Escolha uma das peças para jogar!\n");
+printf("1. Bispo\n");
+printf("2. Rainha\n");
+printf("3. Torre\n");
+scanf("%d", &opcao);
+
+if (opcao == 1)
+{
+    
+}
+
+*/
+
+
+
+
     return 0;
 }
