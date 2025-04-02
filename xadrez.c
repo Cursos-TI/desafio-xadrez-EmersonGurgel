@@ -34,10 +34,12 @@ int main() {
     Bispo: Move-se na diagonal. Seu programa deverá simular o movimento do Bispo cinco casas na diagonal para cima e à direita. Para representar a diagonal, você imprimirá a combinação de duas direções a cada casa (ex: "Cima, Direita").
      
     Rainha: Move-se em todas as direções. Seu programa deverá simular o movimento da Rainha oito casas para a esquerda.
+    
+    Cavalo: deverá se mover duas casas para baixo e uma casa para a esquerda.
 
                                                                                                                     */
 
-int torre = 1, rainha =  1; 
+int torre = 1, rainha =  1, cavaloBaixo, cavaloEsquerda = 1, opcao; 
 
 
 printf("**** Peça: Bispo ****\n\n");
@@ -66,33 +68,68 @@ do
  torre++;
 } while (torre <= 5);
 
+printf("\n\n");
+printf("**** Peça: Cavalo ****\n\n");
 
+   
 
-
-
-
-
-
-
-
-
-/*
-printf("*** Bem vindo ao jogo de xadrez - Matecheck ***\n");
-printf("Escolha uma das peças para jogar!\n");
-printf("1. Bispo\n");
-printf("2. Rainha\n");
-printf("3. Torre\n");
+printf("escolha uma opção!\n");
+printf("1. baixo, esquerda\n");
+printf("2. baixo, direita\n");
 scanf("%d", &opcao);
 
-if (opcao == 1)
+    switch(opcao){
+    case 1:
+    printf("1. Opção baixo, esquerda\n\n");
+    break;
+    case 2:
+    printf("2. Opção baixo, direita\n\n");
+    break;
+    default:
+    printf("opção inválida\n\n");
+    break;
+} 
+if (opcao)
 {
-    
+ if (opcao == 1)
+ {
+   for(cavaloBaixo = 1; cavaloBaixo <= 2; cavaloBaixo++){
+    while(cavaloEsquerda <= 1){
+        printf("esquerda\n");
+        cavaloEsquerda++;
+    }
+    printf("baixo\n");
+   }
+ }else if (opcao == 2) {
+    for(cavaloBaixo = 1; cavaloBaixo <= 2; cavaloBaixo++){
+        while(cavaloEsquerda <= 1){
+            printf("direita\n");
+            cavaloEsquerda++;
+        }
+        printf("baixo\n");
+    }
+ }
+ 
 }
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////
+
+
 
 
 
 
     return 0;
+
 }
