@@ -4,7 +4,6 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
@@ -29,17 +28,74 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops.
 
 
-    /* Torre: Move-se em linha reta horizontalmente ou verticalmente. Seu programa deverá simular o movimento da Torre cinco casas para a direita.
+    /* Torre: 5 casas pra direita;
  
-    Bispo: Move-se na diagonal. Seu programa deverá simular o movimento do Bispo cinco casas na diagonal para cima e à direita. Para representar a diagonal, você imprimirá a combinação de duas direções a cada casa (ex: "Cima, Direita").
+    Bispo: 5 casas pra diagonal direita pra cima
      
-    Rainha: Move-se em todas as direções. Seu programa deverá simular o movimento da Rainha oito casas para a esquerda.
+    Rainha: 8 casas pra esquerda
     
-    Cavalo: deverá se mover duas casas para baixo e uma casa para a esquerda.
+    Cavalo: uma vez pra cima direita em L
+*/
 
-                                                                                                                    */
 
-int torre = 1, rainha =  1, cavaloBaixo, cavaloEsquerda = 1, opcao; 
+void movimentoTorre(int casas){
+    if(casas > 0){
+        printf("direita\n");
+        movimentoTorre(casas - 1);
+    }
+}
+void movimentoBispo(int casas){
+    if(casas > 0){
+        printf("cima, direita\n");
+        
+        movimentoBispo(casas - 1);
+    }
+}
+
+void movimentoRainha(int casas){
+    if(casas > 0){
+        printf("Esquerda\n");
+        movimentoRainha(casas - 1);
+    }
+}
+
+int main() {
+            
+printf("Peça torre:\n\n");
+
+movimentoTorre(5);
+
+printf("\n\n");
+
+printf("Peça Bispo:\n\n");
+
+movimentoBispo(5);
+
+printf("\n\n");
+
+printf("Peça rainha:\n\n");
+
+
+movimentoRainha(8);
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ 
+ 
+ /* int torre = 1, rainha =  1, cavaloBaixo, cavaloEsquerda = 1, opcao; 
 
 
 printf("**** Peça: Bispo ****\n\n");
@@ -132,4 +188,5 @@ if (opcao)
 
     return 0;
 
-}
+}]
+    */
