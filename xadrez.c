@@ -34,7 +34,7 @@
      
     Rainha: 8 casas pra esquerda
     
-    Cavalo: uma vez pra cima direita em L
+    Cavalo: 2 casas pra cima e 1 pra direita em L
 */
 
 
@@ -79,9 +79,27 @@ printf("Peça rainha:\n\n");
 movimentoRainha(8);
 
 
+printf("Peça Bispo:\n\n");
+
+int movibispo = 1;
+for(int i = 1; i < 5; i++){
+printf("cima\n");
+do{
+printf("direita\n");
+movibispo++;
+} while (movibispo < i);
+
+}
 
 
 
+
+printf("Peça cavalo:\n\n");
+
+for(int i = 0, j = 0; i < 2 && j < 1; i++, j++){
+  printf("cima, cima\n");
+  printf("direita\n");
+}
 
 
 
