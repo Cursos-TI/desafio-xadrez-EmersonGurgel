@@ -30,28 +30,33 @@
 
     /* Torre: 5 casas pra direita;
  
-    Bispo: 5 casas pra diagonal direita pra cima
+    Bispo: 5 casas pra diagonal "direita cima"
      
     Rainha: 8 casas pra esquerda
     
     Cavalo: 2 casas pra cima e 1 pra direita em L
 */
 
-
+//recursividade para a o movimento da carta: torre;
+//decrementa -1 até que o valor variável "casas" seja maior que 0;
 void movimentoTorre(int casas){
     if(casas > 0){
         printf("direita\n");
         movimentoTorre(casas - 1);
     }
 }
+//recursividade para a o movimento da carta: bispo;
+//decrementa -1 até que o valor da variável "casas" seja maior que 0;
 void movimentoBispo(int casas){
     if(casas > 0){
-        printf("cima, direita\n");
+        printf("direita, cima\n");
         
         movimentoBispo(casas - 1);
     }
 }
 
+//recursividade para a o movimento da carta: rainha;
+//decrementa -1 até que o valor da variável "casas" seja maior que 0;
 void movimentoRainha(int casas){
     if(casas > 0){
         printf("Esquerda\n");
@@ -60,51 +65,72 @@ void movimentoRainha(int casas){
 }
 
 int main() {
-            
+ 
+    // apresenta a carta;
 printf("Peça torre:\n\n");
 
+//chama a recursividade "void" da carta selcionada " "abaixo;
 movimentoTorre(5);
 
+//pular duas linhas;
 printf("\n\n");
 
+
+
+
+// apresenta a carta
 printf("Peça Bispo:\n\n");
 
+//chama a recursividade "void" da carta selcionada " "abaixo
 movimentoBispo(5);
 
+//pular duas linhas;
 printf("\n\n");
 
+
+
+// apresenta a carta
 printf("Peça rainha:\n\n");
 
-
+//chama a recursividade "void" da carta selcionada " "abaixo
 movimentoRainha(8);
 
+//pular duas linhas;
+printf("\n\n");
 
+// apresenta a carta
 printf("Peça Bispo:\n\n");
 
-int movibispo = 1;
-for(int i = 1; i < 5; i++){
-printf("cima\n");
+
+//Loop aninhado com FOR e DO WHILE;
+int movibispo = 0; //variável do DO WHILE;
+for(int i = 0; i < 5; i++){ // (variável; condição; incremento do FOR;
+printf("direita\n"); //impressão do FOR;
 do{
-printf("direita\n");
-movibispo++;
-} while (movibispo < i);
+printf("cima\n"); //impressão do DO WHILE;
+movibispo++; // imcremento do DO WHILE;
+} while (movibispo < i); //condição do DO WHILE;
 
 }
 
-
+//pular duas linhas;
+printf("\n\n");
 
 
 printf("Peça cavalo:\n\n");
 
-for(int i = 0, j = 0; i < 2 && j < 1; i++, j++){
-  printf("cima, cima\n");
-  printf("direita\n");
+for(int i = 0; i < 1; i++) // (variável; condição; incremento do FOR externo;
+{
+    for(int j = 0; j < 2; j++) // (variável; condição; incremento do FOR interno;
+    {
+    printf("cima\n"); // impressão do FOR externo;
+    }
+    printf("direita\n"); // impressão do FOR interno;
+    
 }
 
-
-
+return 0;
 }
-
 
 
 
@@ -206,5 +232,5 @@ if (opcao)
 
     return 0;
 
-}]
+
     */
